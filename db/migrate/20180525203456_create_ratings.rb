@@ -4,7 +4,7 @@ class CreateRatings < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :place
       t.string :website
-      t.Integer :rate
+      t.integer :rate
       t.string :service
 
       t.timestamps

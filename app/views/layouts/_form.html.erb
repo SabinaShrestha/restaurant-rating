@@ -1,0 +1,23 @@
+
+
+<h1>
+  <%= @page.id ? 'Edit Page' : 'Add Page' %>
+</h1>
+<%= form_for @page do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br />
+  <%= f.label :place %>
+  <%= f.text_field :place %>
+  <br />
+  <%= f.label :website %>
+  <%= f.text_area :website %>
+  <br />
+  <%= f.label :rate %>
+  <%= f.text_area :rate %>
+  <br />
+  <%= f.label :service %>
+  <%= f.text_area :service %>
+  <br />
+  <%= f.submit %>
+<% end %>

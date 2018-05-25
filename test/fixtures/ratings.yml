@@ -4,12 +4,12 @@ one:
   title: MyString
   place: MyString
   website: MyString
-  rate: 
+  rate: 1
   service: MyString
 
 two:
   title: MyString
   place: MyString
   website: MyString
-  rate: 
+  rate: 1
   service: MyString
