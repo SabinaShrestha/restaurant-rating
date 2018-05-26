@@ -1,6 +1,7 @@
 class RatingsController < ApplicationController
   def index
-    @ratings = Rating.all
+    @ratings = Rating.order(created_at: :DESC)
+
   end
 
   def show
@@ -14,7 +15,7 @@ class RatingsController < ApplicationController
   def create
     @rating = Rating.new
 
-    if @rating.create(rating_params)
+    if @rating.save(rating_params)
       redirect_to ratings_path
     else
       render :new
@@ -33,6 +34,11 @@ class RatingsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    Rating.find(params[:id]).destroy
+    redirect_to ratings_path
   end
 
 

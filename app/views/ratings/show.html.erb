@@ -1,2 +1,13 @@
-<h1>Ratings#show</h1>
-<p>Find me in app/views/ratings/show.html.erb</p>
+
+<%= @rating.title %>
+<br />
+<%= @rating.place %>
+<br />
+<%= @rating.website %>
+<br />
+<%= @rating.rate %>
+<br />
+<%= @rating.service %>
+<br />
+<%= link_to 'Edit', edit_rating_path(@rating.id) %>
+<%= link_to 'Delete', rating_path(@rating.id), method: :delete %>
